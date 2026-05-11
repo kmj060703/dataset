@@ -1,0 +1,112 @@
+{
+    "codebase_version": "v3.0",
+    "robot_type": "eclipse_ros",
+    "total_episodes": 64,
+    "total_frames": 25576,
+    "total_tasks": 1,
+    "chunks_size": 1000,
+    "data_files_size_in_mb": 100,
+    "video_files_size_in_mb": 200,
+    "fps": 30,
+    "splits": {
+        "train": "0:64"
+    },
+    "data_path": "data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet",
+    "video_path": "videos/{video_key}/chunk-{chunk_index:03d}/file-{file_index:03d}.mp4",
+    "features": {
+        "observation.state": {
+            "dtype": "float32",
+            "shape": [
+                10
+            ],
+            "names": [
+                "obs_pose_x",
+                "obs_pose_y",
+                "obs_pose_z",
+                "obs_rot6d_0",
+                "obs_rot6d_1",
+                "obs_rot6d_2",
+                "obs_rot6d_3",
+                "obs_rot6d_4",
+                "obs_rot6d_5",
+                "obs_gripper"
+            ]
+        },
+        "observation.images.image_obs": {
+            "dtype": "video",
+            "shape": [
+                360,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.height": 360,
+                "video.width": 640,
+                "video.codec": "av1",
+                "video.pix_fmt": "yuv420p",
+                "video.is_depth_map": false,
+                "video.fps": 30,
+                "video.channels": 3,
+                "has_audio": false
+            }
+        },
+        "action": {
+            "dtype": "float32",
+            "shape": [
+                10
+            ],
+            "names": [
+                "action_pose_x",
+                "action_pose_y",
+                "action_pose_z",
+                "action_rot6d_0",
+                "action_rot6d_1",
+                "action_rot6d_2",
+                "action_rot6d_3",
+                "action_rot6d_4",
+                "action_rot6d_5",
+                "action_gripper"
+            ]
+        },
+        "timestamp": {
+            "dtype": "float32",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "frame_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "episode_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "task_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        }
+    }
+}

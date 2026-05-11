@@ -2,7 +2,7 @@
     "codebase_version": "v3.0",
     "robot_type": "eclipse_ros",
     "total_episodes": 64,
-    "total_frames": 25576,
+    "total_frames": 25300,
     "total_tasks": 1,
     "chunks_size": 1000,
     "data_files_size_in_mb": 100,
